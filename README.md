@@ -9,9 +9,13 @@
 * naive_nue
 
 *Hemsleek
+
 *Rae
+
 *[Prineyglad](https://www.github.com/gbemy)
+
 *[Onward](https://www.github.com/adeyemionward)
+
 *Henry_hoc
 
 > will be updating as time goes on
