@@ -6,7 +6,8 @@
 * [blazingkevin](https://www.github.com/Blazingkevin)
 * Onward
 * [Atoms](https://www.github.com/jatoms)
-* naive_nuel\newline
+* naive_nue
+
 *Hemsleek
 *Rae
 *[Prineyglad](https://www.github.com/gbemy)
