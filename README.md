@@ -2,7 +2,7 @@
 
 ## COLLABORATORS
 
-* [tobecci](https://wwww.github.com/tobecci)
+* [tobecci](https://wwww.github.com/Tobecci)
 * [blazingkevin](https://www.github.com/Blazingkevin)
 * Onward
 * [Atoms](https://www.github.com/jatoms)
