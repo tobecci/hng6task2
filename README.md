@@ -4,23 +4,13 @@
 
 * [tobecci](https://www.github.com/Tobecci)
 * [blazingkevin](https://www.github.com/Blazingkevin)
-* Onward
+* [Onward](https://www.github.com/adeyemionward)
 * [Atoms](https://www.github.com/jatoms)
 * naive_nue
 * Hemsleek
 * Rae
 * [Prineyglad](https://www.github.com/gbemy)
-* [Onward](https://www.github.com/adeyemionward)
 * Henry_hoc
-* tobecci
-* blazingkevin
-* onward
-* atom 2
-* Gbemy
-*
-*
-*
-*
-*
+* Ademola
 
 > will be updating as time goes on
