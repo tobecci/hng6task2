@@ -12,5 +12,15 @@
 * [Prineyglad](https://www.github.com/gbemy)
 * [Onward](https://www.github.com/adeyemionward)
 * Henry_hoc
+* tobecci
+* blazingkevin
+* onward
+* atom 2
+* Gbemy
+*
+*
+*
+*
+*
 
 > will be updating as time goes on
