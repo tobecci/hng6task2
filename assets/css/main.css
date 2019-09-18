@@ -1,0 +1,609 @@
+body, html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;	
+	overflow: hidden;
+}
+.container-fluid{
+	padding: 0;	
+}
+.row{
+	margin: 0;
+	height: auto;	
+	min-height: 100%;
+}
+
+#team-roc-txt,#grp-dsc-txt1,#grp-dsc-txt2, .welcome-txt h2,
+label{
+	font-family: Roboto;
+	font-style: normal;
+	color: #034C8A;
+}
+#team-roc-txt{
+	position: relative;
+	width: 184px;
+	height: 59px;
+	left: 12px;
+	top: 16px;
+
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 35px;	
+}
+#dot{
+	height: 7px;
+	width: 7px;
+
+	float: right;
+	position: relative;
+	top: 21px;
+	right: 31px;
+	border-radius: 50%;
+	background: #B4DEF5;
+}
+
+#illustration{
+	margin-top: 23.5%;
+	position: relative;
+}
+#grp-dsc-txt1{
+	margin-top:30px;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 35px;
+}
+#grp-dsc-txt2{
+	position: relative;
+	width: 430px;
+	height: 56px;
+	top: 5px;
+
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 25px;
+	display: flex;
+}
+
+
+form{
+	width: 90%;
+	margin: 45px auto 0 auto;
+}
+.right-pane{
+	background: #B4DEF5;
+	border-radius: 40px 0px 0px 40px;
+}
+.right{
+	width: 100%;
+	margin-top: 100px;
+	position: relative;
+}
+.welcome-txt{
+	position: relative;
+	top: 30px;
+}
+.welcome-txt h2{
+	margin-left: 25px;
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 45px;
+
+}
+label {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+
+}
+#username, #password{
+	height: 55px;
+	width: 100%;
+}
+
+#fgt-psd{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16.5px;
+	line-height: 21px;
+	float: right;
+	position: relative;
+	bottom: 18.5px;
+}
+#fgt-psd a{	
+	color: #034C8A;
+}
+.check-item{
+	position: relative;
+	top: -12px;
+}
+#rem-me{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 15px;
+}
+#login-btn{	
+	position: relative;
+	margin-top: 20px;
+	width: 266px;
+	height: 36px;
+	background: #034C8A;
+	border-color: #034C8A; 
+}
+.signup-msg-link{
+	margin-top: 27px;
+}
+#signupmsg{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+
+	color: #827E7D;
+}
+#signuplink{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	color: #034C8A;
+}
+
+/*Responsiveness (media Queries)*/
+@media only screen and (max-width: 568px){
+	body, html{
+	height: 100%;	
+	overflow: scroll;
+	}
+	.left-pane{
+		padding-bottom: 20px;
+	}
+	#team-roc-txt{
+		margin: 5px auto 0 auto;		
+		line-height: 27px; 
+	}
+	#dot{
+		position: relative;
+		top: 18px;
+		right: 31px;
+	}
+	#illustration{
+	margin-top: 15px;
+	position: relative;
+	}
+	#grp-dsc-txt1{
+	margin-top:20px;
+	font-weight: bold;
+	font-size: 23px;
+	line-height: 20px;
+	}
+	#grp-dsc-txt2{
+	position: relative;
+	width: 95%;
+	height: 40px;
+	top: 7px;
+
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 17px;
+	display: flex;
+	}
+
+	.right-pane{		
+	border-radius: 30px 30px 0px 0px;
+	}
+	.welcome-txt h2{
+	visibility: hidden;
+	}
+	form{
+	position: relative;
+	top: -230px;
+	}
+	#username,#password{
+	border-radius: 10px;		
+	}
+	#login-btn{
+	width: 70%;
+	margin-top: 10px;
+	border-radius: 10px;
+	}
+	.signup-msg-link{
+		text-align: center;
+	}
+	#signupmsg{
+		font-size: 15px;
+	}
+	#signuplink{
+		font-size: 16.5px;
+	}
+	
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px){
+	body, html{
+	height: 100%;	
+	overflow: scroll;
+	}
+	#grp-dsc-txt2{
+		text-align: center;
+	}
+	.right-pane{		
+	border-radius: 35px 35px 0px 0px;
+	}
+	.left-pane{
+		padding-bottom: 20px;
+	}
+	#team-roc-txt{
+		margin: 5px auto 0 auto;		
+		line-height: 27px; 
+	}
+	#dot{
+		position: relative;
+		top: 18px;
+		right: 31px;
+	}
+	#illustration{
+	margin-top: 15px;
+	position: relative;
+	}
+	#grp-dsc-txt1{
+	margin-top:20px;
+	font-weight: bold;
+	font-size: 23px;
+	line-height: 20px;
+	}
+	#grp-dsc-txt2{
+	position: relative;
+
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 17px;
+	display: flex;
+	}
+
+	.right-pane{		
+	border-radius: 30px 30px 0px 0px;
+	}
+	.welcome-txt h2{
+	visibility: hidden;
+	}
+	form{
+	position: relative;
+	top: -230px;
+	}
+	#username,#password{
+	border-radius: 10px;		
+	}
+	#login-btn{
+	width: 70%;
+	margin-top: 10px;
+	border-radius: 10px;
+	}
+	.signup-msg-link{
+		text-align: center;
+	}
+	#signupmsg{
+		font-size: 15px;
+	}
+	#signuplink{
+		font-size: 16.5px;
+	}
+}
+@media screen and (min-width: 770px) and (max-width: 895px){
+	body, html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;	
+	overflow: hidden;
+	}
+	.container-fluid{
+		padding: 0;	
+	}
+	.row{
+		margin: 0;
+		height: auto;	
+		min-height: 100%;
+	}
+
+	#team-roc-txt,#grp-dsc-txt1,#grp-dsc-txt2, .welcome-txt h2,
+	label{
+		font-family: Roboto;
+		font-style: normal;
+		color: #034C8A;
+	}
+	#team-roc-txt{
+		position: relative;
+		width: 184px;
+		height: 59px;
+		left: 12px;
+		top: 16px;
+
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;	
+	}
+	#dot{
+		height: 7px;
+		width: 7px;
+
+		float: right;
+		position: relative;
+		top: 21px;
+		right: 31px;
+		border-radius: 50%;
+		background: #B4DEF5;
+	}
+
+	#illustration{
+		margin-top: 23.5%;
+		position: relative;
+	}
+	#grp-dsc-txt1{
+		margin-top:30px;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 25px;
+	}
+	#grp-dsc-txt2{
+		position: relative;
+		text-align: center;
+		width: 90%;
+
+		font-weight: normal;
+		font-size: 19px;
+		line-height: 20px;
+		display: flex;
+	}
+
+
+	form{
+		width: 90%;
+		margin: 45px auto 0 auto;
+	}
+	.right-pane{
+		background: #B4DEF5;
+		border-radius: 40px 0px 0px 40px;
+	}
+	.right{
+		width: 100%;
+		margin-top: 100px;
+		position: relative;
+	}
+	.welcome-txt{
+		position: relative;
+		top: 30px;
+	}
+	.welcome-txt h2{
+		margin-left: 25px;
+		font-weight: bold;
+		font-size: 45px;
+		line-height: 45px;
+
+	}
+	label {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+
+	}
+	#username, #password{
+		height: 55px;
+		width: 100%;
+	}
+
+	#fgt-psd{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16.5px;
+		line-height: 21px;
+		float: right;
+		position: relative;
+		bottom: 18.5px;
+	}
+	#fgt-psd a{	
+		color: #034C8A;
+	}
+	.check-item{
+		position: relative;
+		top: -12px;
+	}
+	#rem-me{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 15px;
+	}
+	#login-btn{	
+		position: relative;
+		margin-top: 20px;
+		width: 266px;
+		height: 36px;
+		background: #034C8A;
+		border-color: #034C8A; 
+	}
+	.signup-msg-link{
+		margin-top: 27px;
+	}
+	#signupmsg{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+
+		color: #827E7D;
+	}
+	#signuplink{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		color: #034C8A;
+	}
+}
+
+@media screen and (min-width: 1560px){
+	body, html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;	
+	overflow: hidden;
+	}
+	.container-fluid{
+		padding: 0;	
+	}
+	.row{
+		margin: 0;
+		height: auto;	
+		min-height: 100%;
+	}
+
+	#team-roc-txt,#grp-dsc-txt1,#grp-dsc-txt2, .welcome-txt h2,
+	label{
+		font-family: Roboto;
+		font-style: normal;
+		color: #034C8A;
+	}
+	#team-roc-txt{
+		position: relative;
+		width: 184px;
+		height: 59px;
+		left: 12px;
+		top: 16px;
+
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;	
+	}
+	#dot{
+		height: 7px;
+		width: 7px;
+
+		float: right;
+		position: relative;
+		top: 21px;
+		right: 31px;
+		border-radius: 50%;
+		background: #B4DEF5;
+	}
+
+	#illustration{
+		margin-top: 20%;
+		position: relative;
+	}
+	#grp-dsc-txt1{
+		margin-top:30px;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 25px;
+	}
+	#grp-dsc-txt2{
+		position: relative;
+		text-align: center;
+		width: 90%;
+
+		font-weight: normal;
+		font-size: 19px;
+		line-height: 20px;
+		display: flex;
+	}
+
+
+	form{
+		width: 90%;
+		margin: 45px auto 0 auto;
+	}
+	.right-pane{
+		background: #B4DEF5;
+		border-radius: 40px 0px 0px 40px;
+	}
+	.right{
+		width: 100%;
+		margin-top: 100px;
+		position: relative;
+	}
+	.welcome-txt{
+		position: relative;
+		top: 30px;
+	}
+	.welcome-txt h2{
+		margin-left: 25px;
+		font-weight: bold;
+		font-size: 45px;
+		line-height: 45px;
+
+	}
+	label {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+
+	}
+	#username, #password{
+		height: 55px;
+		width: 100%;
+	}
+
+	#fgt-psd{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16.5px;
+		line-height: 21px;
+		float: right;
+		position: relative;
+		bottom: 18.5px;
+	}
+	#fgt-psd a{	
+		color: #034C8A;
+	}
+	.check-item{
+		position: relative;
+		top: -12px;
+	}
+	#rem-me{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 15px;
+	}
+	#login-btn{	
+		position: relative;
+		margin-top: 20px;
+		width: 266px;
+		height: 36px;
+		background: #034C8A;
+		border-color: #034C8A; 
+	}
+	.signup-msg-link{
+		margin-top: 27px;
+	}
+	#signupmsg{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+
+		color: #827E7D;
+	}
+	#signuplink{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		color: #034C8A;
+	}
+}
