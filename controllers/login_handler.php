@@ -11,7 +11,7 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $password = filter_input(INPUT_POST, 'password') ;
     $email = filter_input(INPUT_POST, 'email') ;
     
-    $isValid = $model::validate($email , $password) ; 
+    $isValid = $model::validate($email , $password); 
      if($isValid){//redirect control to the success page
          $success_path = $root.'/success.php' ;
           header("Location: ".$success_path) ;
