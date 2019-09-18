@@ -6,6 +6,9 @@ class Model
         $this->name = "model";
     }
 
+    /**
+     * function for adding data to the username and password field
+     */
     public function add_entry($email, $password)
     {
         $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT));
