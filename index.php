@@ -1,3 +1,4 @@
+<?php session_start() ;?>
 <!DOCTYPE html>
 <html>
 
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/	bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="http://fonts.googleapis.com/css?family=roboto">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <script type="text/javascript" src="assets/js/script.js" ></script>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
                     <h2>Hello,</h2>
                     <h2>Welcome back </h2>
                     <div>
-                        <form action="controller.php" method="POST">
+                        <form id="login-form"  action="controllers/login_handler.php" onsubmit="return processForm()" method="POST">
                             <label for="username">Email</label><br>
                             <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
                             <br>
@@ -41,6 +43,7 @@
                             <br>
                             <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
                             <br>
+                            <p id="error_message">&nbsp;</p>
                             <span class="check-item">
                                 <input type="checkbox" name="remember" id="remember">
                                 <label for="remember" id="rem-me">Remember me</label>
@@ -52,11 +55,38 @@
                             <p class="signup-msg-link">
                                 <span id="signupmsg"> New to TeamRocket?</span>
                                 <a href="#" id="signuplink">Signup now</a>
-                                <p>
+                            </p>
                         </form>
                     </div>
                 </div>
             </div>
 </body>
 
+<?php
+    // if the entry is invalid ,control will be redirected back here...with additional information
+    //like an error messsage.Also, the invalid data entered will be retained
+    if (isset($_SESSION['username'])){
+
+        $script="<script type=text/javascript>\n" ;
+        $script.="window.onload=function(){" ;
+
+        $script.="document.getElementById('error_message').firstChild.nodeValue='Invalid entry';\n" ;
+
+        $script.="document.getElementById('username').value ='" ;
+        $script.=$_SESSION['username'] ;
+        $script.="';\n" ;
+
+        $script.="document.getElementById('password').value ='";
+        $script.=$_SESSION['password'] ;
+        $script.="';\n" ;
+
+        $script.="}\n" ;
+        $script.="</script>" ;
+        session_destroy() ;
+        echo $script;
+    }
+?>
+
 </html>
+
+
