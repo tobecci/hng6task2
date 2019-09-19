@@ -1,8 +1,9 @@
-<?php
+<?php session_start() ;
 // controller for login
 
-$root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') ;
-$path =$root.'/models/model.php' ;
+$_SESSION['username']=  filter_input(INPUT_POST, 'username') ;
+$_SESSION['password']=  filter_input(INPUT_POST, 'password') ;
+$path ='../models/Model.php' ;
 
 require_once($path) ;
 
@@ -11,19 +12,19 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $password = filter_input(INPUT_POST, 'password') ;
     $email = filter_input(INPUT_POST, 'email') ;
     
+<<<<<<< HEAD
     $isValid = $model::validate($email , $password); 
+=======
+    $isValid = Model::validate($email , $password) ; 
+>>>>>>> 0e705535fa3eb7559029ca5209fe02c73ff8410e
      if($isValid){//redirect control to the success page
-         $success_path = $root.'/success.php' ;
+         session_destroy();
+         $success_path = '../pages/success.php' ;
           header("Location: ".$success_path) ;
      }
-     else{// redirect control to index.php but with an error message passed through the POST associative array
-         $error_message = 'Invalid Entry' ;
-         $_POST['error_message'] =$error_message ;
-         $index_path = $root.'/index.php'  ;
-         header("Loacation: ".$index_path) ;
+     else{// redirect control back to login( index.php)
+         $index_path = '../index.php'  ;
+         header("Location: ".$index_path) ;
      }
 }
-
-
-
 ?>
