@@ -34,7 +34,7 @@
                     <h2>Hello,</h2>
                     <h2>Welcome back </h2>
                 </div>
-                <form action="controller.php" method="POST" class="form">
+                <form action="controllers/login_handler.php" method="post" class="form">
                     <label for="username">Email</label><br>
                     <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
                     <br>
@@ -80,7 +80,7 @@
                     <h2>Hello,</h2>
                     <h2>Welcome back </h2>
                     <div>
-                        <form id="login-form" action="controllers/login_handler.php" onsubmit="return processForm()" method="POST">
+                        <form id="login-form" action="../controllers/login_handler.php" onsubmit="return processForm()" method="POST">
                             <label for="username">Email</label><br>
                             <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
                             <br>

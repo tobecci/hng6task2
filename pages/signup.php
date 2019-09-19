@@ -27,12 +27,12 @@
 			</center>
 		</div>
 		<div class="col-md-6 right-pane">
-			<div class="right">
+			<div class="right" id="right">
 				<div class="create-acct">
 					<h2> Create Account </h2>
 					<div>
 						<div class="form-container">
-							<form action="controller.php" method="POST">
+							<form action="controllers/signup_handler.php" method="POST">
 
 								<label for="fname" id="fname-lb">Full Name</label><br>
 								<input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your full name">
