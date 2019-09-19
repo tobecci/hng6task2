@@ -7,7 +7,7 @@
 * [Onward](https://www.github.com/adeyemionward)
 * [Atoms](https://www.github.com/jatoms)
 * naive_nue
-* Hemsleek
+* [Hemsleek](https://www.github.com/hemsleek)
 * Rae
 * [Prineyglad](https://www.github.com/gbemy)
 * Henry_hoc
