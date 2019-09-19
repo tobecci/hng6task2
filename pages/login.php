@@ -59,6 +59,8 @@
             </div>
         </div>
     </div>
+
+    <!-- 
     <div class="container-fluid row">
         <div class="col-md-6 left-pane">
             <div id="team-roc-txt">TeamRocket
@@ -80,7 +82,7 @@
                     <h2>Hello,</h2>
                     <h2>Welcome back </h2>
                     <div>
-                        <form id="login-form" action="../controllers/login_handler.php" onsubmit="return processForm()" method="POST">
+                        <form id="login-form" action="controllers/login_handler.php" onsubmit="return processForm()" method="post">
                             <label for="username">Email</label><br>
                             <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
                             <br>
@@ -105,7 +107,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 </body>
 
 <?php

@@ -65,4 +65,4 @@ class Model
 
 // echo $model->validate("admin", "admin");
 
-var_dump($model->user_exists("tobecci"));
+var_dump(MODEL::user_exists("tobecci"));
