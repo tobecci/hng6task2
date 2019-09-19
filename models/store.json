@@ -38,5 +38,9 @@
     {
         "username": "tobecci",
         "password": "$2y$10$.G5Rtg6KnY.KWZvkIxVHQeeCc7tZGGTnyo8tQQvvyNSk2nRBdxYjW"
+    },
+    {
+        "username": "admin",
+        "password": "$2y$10$wkg7Aq1xtJlR\/iwBwx5DxOffVJHKt4k63iJ3wp7HKVC0Q1Y7ci8XC"
     }
 ]
