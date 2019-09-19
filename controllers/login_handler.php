@@ -8,7 +8,7 @@ require_once($path);
 
 //check the HTTP Request method 
 
-if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') {
+if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST'){
     $password = filter_input(INPUT_POST, 'password');
     $email = filter_input(INPUT_POST, 'email');
 
