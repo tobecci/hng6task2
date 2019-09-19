@@ -1,9 +1,8 @@
 body, html{
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	text-shadow: none;	
-	overflow: hidden;
+	
 }
 .container-fluid{
 	padding: 0;	
