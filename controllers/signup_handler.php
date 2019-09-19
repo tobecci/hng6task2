@@ -17,7 +17,7 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     }
     else{// return to the signup page with a text indicator of signup error
         //(by tobecci) i just redirected to index on failure
-        header("Location: ../index.php");
+        header("Location: ../signup.php");
         // require_once "../index.php";
     } 
 }

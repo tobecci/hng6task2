@@ -37,10 +37,10 @@
                 </div>
                 <form action="controllers/login_handler.php" method="post" class="form">
                     <label for="username">Email</label><br>
-                    <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email"  required>
                     <br>
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password"  required>
                     <br>
                     <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
                     <br>

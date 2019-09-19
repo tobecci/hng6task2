@@ -28,7 +28,9 @@ class Model
         //decoding/converting php array string  to json object 
         $json_data  = json_encode($arr_data);
         //storing the final data into store.json     
-        file_put_contents($filetxt, $json_data);
+        if(!file_put_contents($filetxt, $json_data)){
+            return false;
+        }
         return true;
     }
 
