@@ -52,22 +52,7 @@
 									I agree to the <span id="tpp">Terms, Privacy Policy</span> and <span id="con">Conditions</span>
 								</div>
 
-<<<<<<< HEAD
-						<div class="t-c">
-						<input type="checkbox" name="t-c" id="t-cr">
-							I agree to the <span id="tpp">Terms, Privacy Policy</span> and <span id="con">Conditions</span>
-						</div>
-						
-						<center>
-							<input type="submit" value="Signup" id="signup-btn" class="btn btn-info">
-						</center>
 
-						<p class="login-msg-link">
-							<span id="loginmsg"> Already have an account?</span> 
-							<a href="index.php" id="loginlink">Login</a> 
-						<p>
-					</form>
-=======
 
 								<center>
 									<input type="submit" value="Signup" id="signup-btn" class="btn btn-info">
@@ -80,7 +65,7 @@
 							</form>
 						</div>
 					</div>
->>>>>>> c81f6995805166e800fd2f1f1abe74c5aaf6e38f
+
 				</div>
 			</div>
 </body>
