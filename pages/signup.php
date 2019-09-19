@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/	bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="http://fonts.googleapis.com/css?family=roboto">
 	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
-</head>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+</head> 
 
 <body>
 	<div class="container-fluid row">
@@ -32,7 +33,7 @@
 					<h2> Create Account </h2>
 					<div>
 						<div class="form-container">
-							<form action="controllers/signup_handler.php" method="POST">
+                                                    <form action="controllers/signup_handler.php" onsubmit="return passwordMatch()" method="POST">
 
 								<label for="fname" id="fname-lb">Full Name</label><br>
 								<input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your full name" required>
@@ -45,8 +46,7 @@
 								<br>
 								<label for="conf_password" id="conf-psd-lb">Confirm Password</label><br>
 								<input type="password" name="conf_password" id="conf_password" class="form-control" placeholder="Enter your password again"  required>
-								<br>
-
+                                                                <p id="error_message" style="color: red">&nbsp;</p>
 								<div class="t-c">
 									<input type="checkbox" name="t-c" id="t-cr">
 									I agree to the <span id="tpp">Terms, Privacy Policy</span> and <span id="con">Conditions</span>
@@ -67,5 +67,19 @@
 				</div>
 			</div>
 </body>
+<?php
+// if signup fails as result of already registered email display error.
+
+if(isset($_SESSION['email'])){
+    $script = "<script type='text/javascript'>" ; 
+    $script.="document.getElementById('error_message').firstChild.nodeValue='" ;
+    $script.=$_SESSION['email'] ;
+    $script.=" has already been registered' ;" ;
+    $script.="</script>" ;
+    
+    echo $script ;
+}
+
+?>
 
 </html>
