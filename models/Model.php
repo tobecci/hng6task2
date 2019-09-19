@@ -9,7 +9,7 @@ class Model
     /**
      * function for adding data to the username and password field
      */
-    public function add_entry($email, $password)
+    public static function add_entry($email, $password)
     {
         $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT));
         //declaring the store.json     
@@ -30,7 +30,30 @@ class Model
     }
 
     public static function validate($email, $password)
-    { }
+    {
+        $check = false;
+        $users = json_decode(file_get_contents('store.json'));
+        foreach ($users as $user) {
+            if ($user->username === $email) {
+                if (password_verify($password, $user->password)) {
+                    $check = true;
+                }
+            }
+        }
+        return $check;
+    }
+
+    public static function user_exists($email)
+    {
+        $check = false;
+        $users = json_decode(file_get_contents('store.json'));
+        foreach ($users as $user) {
+            if ($user->username === $email) {
+                $check = true;
+            }
+        }
+        return $check;
+    }
 
     public function delete_entry()
     { }
@@ -39,18 +62,7 @@ class Model
     { }
 }
 
-/*
-You are to implement just 
-1)addEntry 
-2)validate
-1) validate ...takes two parameters... eMail and password...first,harsh the password ...
-turn the email and hashed password to a JSON string ...append it to the string in the storage.json file.
-.. return a Boolean when the process is done..
-2)validate...takes email and password ...use json_decode to decode the string in the storage.json file...
-since it returns an array....loops through it to check if there is an email that has a value equal to the one passed in 
-...if there is , check if the password matches the hashed password that corresponds to that email...if it does , 
-returns true if not return false...if the email doesn't extend return false too.
-Those are two functions you are to implement....we are not deleting values ...and we are not editing password...
-at least they just asked us to implement login  and signuy
-sign-up*
-*/
+
+// echo $model->validate("admin", "admin");
+
+var_dump($model->user_exists("tobecci"));
