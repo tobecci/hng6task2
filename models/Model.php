@@ -3,7 +3,7 @@ class Model
 {
     public function __construct()
     {
-        $this->name = "model";
+        
     }
 
     /**
@@ -13,7 +13,7 @@ class Model
     {
         $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT));
         //declaring the store.json     
-        $filetxt = 'store.json';
+        $filetxt = __DIR__."/store.json";
         //declaring an empty array
         $arr_data   = [];
         //fetching existing file from store.json
@@ -32,7 +32,7 @@ class Model
     public static function validate($email, $password)
     {
         $check = false;
-        $users = json_decode(file_get_contents('store.json'));
+        $users = json_decode(file_get_contents(__DIR__."/store.json"));
         foreach ($users as $user) {
             if ($user->username === $email) {
                 if (password_verify($password, $user->password)) {
@@ -46,7 +46,7 @@ class Model
     public static function user_exists($email)
     {
         $check = false;
-        $users = json_decode(file_get_contents('store.json'));
+        $users = json_decode(file_get_contents(__DIR__."/store.json"));
         foreach ($users as $user) {
             if ($user->username === $email) {
                 $check = true;

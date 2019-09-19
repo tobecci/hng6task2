@@ -1,8 +1,7 @@
 <?php
 // controller for signup
 
-
-$path ='../models/model.php' ;
+$path ='../models/Model.php' ;
 
 require_once($path) ;
 
@@ -11,15 +10,13 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $password = filter_input(INPUT_POST, 'password') ;
     $email = filter_input(INPUT_POST, 'email') ; 
     
-    $entryIsSuccess = $model::addEntry($email , $password) ;
+    $entryIsSuccess = Model::add_entry($email , $password) ;
     
     if($entryIsSuccess){ //redirect control to the login page(index.php) with a indicator of successful signup
-        $login_path = $root.'/index.php' ;
-        header("Location: ".$login_path) ;
+        require_once "../pages/success.php";
     }
     else{// return to the signup page with a text indicator of signup error
-        $signup_path = $root.'/signup.php' ;
-        header("Location: ".$signup_path) ;
+        require_once "../index.php";
     } 
 }
     

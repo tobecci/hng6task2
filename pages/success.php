@@ -1,0 +1,2 @@
+<?php
+echo "SUCCESS PAGE";
