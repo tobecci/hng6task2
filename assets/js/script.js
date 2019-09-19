@@ -24,9 +24,6 @@ var updateInputs = function(){
     }
 } ;
 
-window.onload=function(){
-    updateInputs() ; 
-};
 
 //on submit, this function is called
 function processForm(){
@@ -37,13 +34,16 @@ function processForm(){
         setStorageValues(username , password) ;
     }
     
-    // if any of the fields is empty, display error_message
-    if(!($('username').value && $('password').value)){
-        $('error_message').firstChild.nodeValue="Please,fill in both fields" ;
-        return false ;
-    }
-    
    return true ;
 } ;
+
+function passwordMatch(){
+    if($('password').value !== $('conf_password').value){
+        console.log('I got here') ;
+        $('error_message').firstChild.nodeValue ='Password should match' ;
+        return false ;
+    }
+    return true ;
+}
 
 

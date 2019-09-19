@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 // controller for signup
 
 $path ='../models/Model.php' ;
@@ -12,14 +12,13 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $name = filter_input(INPUT_POST, 'fname') ; 
     
     $entryIsSuccess = Model::add_entry($name, $email , $password) ;
-    if($entryIsSuccess){ //redirect control to the login page(index.php) with a indicator of successful signup
+    if($entryIsSuccess){ //redirect control to success page
+        session_destroy() ;
         header("Location: ../pages/success.php");
     }
-    else{// return to the signup page with a text indicator of signup error
-        //(by tobecci) i just redirected to index on failure
-        header("Location: ../index.php");
-        // require_once "../index.php";
+    else{//keep track of the email and return to the signup page
+        $_SESSION['email']=$email ;
+        header("Location: ../signup.php");
     } 
 }
     
-?>
