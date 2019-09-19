@@ -9,9 +9,12 @@ class Model
     /**
      * function for adding data to the username and password field
      */
-    public static function add_entry($email, $password)
+    public static function add_entry($name, $email, $password)
     {
-        $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT));
+        $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT), "name" => $name);
+        if(Model::user_exists($email)){
+            return false;
+        }
         //declaring the store.json     
         $filetxt = __DIR__."/store.json";
         //declaring an empty array
@@ -64,5 +67,3 @@ class Model
 
 
 // echo $model->validate("admin", "admin");
-
-var_dump(MODEL::user_exists("tobecci"));

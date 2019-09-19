@@ -13,12 +13,12 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') {
 
     $isValid = Model::validate($email, $password);
     if ($isValid) { //redirect control to the success page
-        echo "success";
+        echo "you have logged in successfully";
         // session_destroy();
         // $success_path = '../pages/success.php';
         // header("Location: " . $success_path);
     } else { // redirect control back to login( index.php)
-        echo "failure";
+        echo "login failed";
         // $index_path = '../index.php';
         // header("Location: " . $index_path);
     }

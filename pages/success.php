@@ -1,2 +1,2 @@
 <?php
-echo "SUCCESS PAGE";
+echo "Your account was created successfully";
