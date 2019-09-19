@@ -11,12 +11,7 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $email = filter_input(INPUT_POST, 'email') ; 
     $name = filter_input(INPUT_POST, 'fname') ; 
     
-<<<<<<< HEAD
-    $entryIsSuccess = Model::addEntry($email , $password) ;
-    
-=======
     $entryIsSuccess = Model::add_entry($name, $email , $password) ;
->>>>>>> 70b833c2041ebab99e6d4d30dd219580339210d9
     if($entryIsSuccess){ //redirect control to the login page(index.php) with a indicator of successful signup
         header("Location: ../pages/success.php");
     }
