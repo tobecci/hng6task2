@@ -28,39 +28,39 @@
 			<div class="right">
 				<div class="welcome-txt">
 					<h2>Hello,</h2><h2>Welcome back </h2>
-				<div>
-				<form action="controller.php" method="POST" >
-					<label for="username">Email</label><br>
-					<input 
-						type="text" 
-						name="username" 
-						id="username" 
-						class="form-control" 
-						placeholder="Username/Email"> 
-					<br>
-					<label for="password">Password</label><br>
-					<input  
-						type="password" 
-						name="password" 
-						id="password"
-						class="form-control" 
-						placeholder="Password">
-					<br>
-					<span id="fgt-psd"><a href="#" >Forgot Password?</a></span>
-					<br>
-					<span class="check-item">
-						<input type="checkbox" name="remember" id="remember">
-						<label for="remember" id="rem-me">Remember me</label>
-					</span>
-					<br>
-					<center>
-						<input type="submit" value="Login" id="login-btn" class="btn btn-info">
-					</center>
-					<p class="signup-msg-link">
-						<span id="signupmsg"> New to TeamRocket?</span> 
-						<a href="#" id="signuplink">Signup now</a> 
-					<p>
-				</form>
+				</div>
+					<form action="controller.php" method="POST" class="form">
+						<label for="username">Email</label><br>
+						<input 
+							type="text" 
+							name="username" 
+							id="username" 
+							class="form-control" 
+							placeholder="Username/Email"> 
+						<br>
+						<label for="password">Password</label><br>
+						<input  
+							type="password" 
+							name="password" 
+							id="password"
+							class="form-control" 
+							placeholder="Password">
+						<br>
+						<span id="fgt-psd"><a href="#" >Forgot Password?</a></span>
+						<br>
+						<span class="check-item">
+							<input type="checkbox" name="remember" id="remember">
+							<label for="remember" id="rem-me">Remember me</label>
+						</span>
+						<br>
+						<center>
+							<input type="submit" value="Login" id="login-btn" class="btn btn-info">
+						</center>
+						<p class="signup-msg-link">
+							<span id="signupmsg"> New to TeamRocket?</span> 
+							<a href="./signup.php" id="signuplink">Signup now</a> 
+						<p>
+					</form>
 			</div>
 		</div>
 	</div>
