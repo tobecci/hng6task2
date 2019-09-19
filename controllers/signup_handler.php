@@ -11,7 +11,7 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
     $password = filter_input(INPUT_POST, 'password') ;
     $email = filter_input(INPUT_POST, 'email') ; 
     
-    $entryIsSuccess = $model::addEntry($email , $password) ;
+    $entryIsSuccess = Model::addEntry($email , $password) ;
     
     if($entryIsSuccess){ //redirect control to the login page(index.php) with a indicator of successful signup
         $login_path = $root.'/index.php' ;
