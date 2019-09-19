@@ -190,7 +190,7 @@ label {
 	position: relative;
 	}
 	.ill-img, .ilstn-txt1{
-	display:none;
+	/* display:none; */
 	}
 	#grp-dsc-txt1{
 	margin-top:20px;
@@ -693,3 +693,15 @@ label {
 		color: #034C8A;
 	}
 }
+
+/* start of @tobeccis code */
+
+@media(min-width:992px){
+.right{
+	width: 100%;
+	margin-top: 10px;
+	position: relative;
+}
+}
+
+/* end of @tobeccis code */
