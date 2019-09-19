@@ -10,16 +10,18 @@ require_once($path);
 
 if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST'){
     $password = filter_input(INPUT_POST, 'password');
-    $email = filter_input(INPUT_POST, 'email');
+    $email = filter_input(INPUT_POST, 'username');
 
     $isValid = Model::validate($email, $password);
     if ($isValid) { //redirect control to the success page
-        session_destroy();
-        $success_path = '../pages/success.php';
-        header("Location: " . $success_path);
+        echo "you have logged in successfully";
+        // session_destroy();
+        // $success_path = '../pages/success.php';
+        // header("Location: " . $success_path);
     } else { // redirect control back to login( index.php)
-        $index_path = '../index.php';
-        header("Location: " . $index_path);
+        echo "login failed";
+        // $index_path = '../index.php';
+        // header("Location: " . $index_path);
     }
 
 }

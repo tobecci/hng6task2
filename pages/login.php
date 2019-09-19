@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="container-fluid row">
         <div class="col-md-6 left-pane">
             <div id="team-roc-txt">TeamRocket
@@ -36,10 +37,10 @@
                 </div>
                 <form action="controllers/login_handler.php" method="post" class="form">
                     <label for="username">Email</label><br>
-                    <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email"  required>
                     <br>
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password"  required>
                     <br>
                     <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
                     <br>
@@ -60,54 +61,7 @@
         </div>
     </div>
 
-    <!-- 
-    <div class="container-fluid row">
-        <div class="col-md-6 left-pane">
-            <div id="team-roc-txt">TeamRocket
-                <div id="dot"></div>
-            </div>
-            <center>
-                <img style="width:90%" src="https://res.cloudinary.com/okafohenrie/image/upload/v1568773421/Illustration_eg8fta.png" id="illustration">
-                <span class="ilstn-txt">
-                    <div id="grp-dsc-txt1">Group Discussions</div>
-                    <div id="grp-dsc-txt2">
-                        Communicative situation that Allows Its Participant To Share Their Views And Opinions
-                    </div>
-                </span>
-            </center>
-        </div>
-        <div class="col-md-6 right-pane">
-            <div class="right">
-                <div class="welcome-txt">
-                    <h2>Hello,</h2>
-                    <h2>Welcome back </h2>
-                    <div>
-                        <form id="login-form" action="controllers/login_handler.php" onsubmit="return processForm()" method="post">
-                            <label for="username">Email</label><br>
-                            <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email">
-                            <br>
-                            <label for="password">Password</label><br>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                            <br>
-                            <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
-                            <br>
-                            <p id="error_message">&nbsp;</p>
-                            <span class="check-item">
-                                <input type="checkbox" name="remember" id="remember">
-                                <label for="remember" id="rem-me">Remember me</label>
-                            </span>
-                            <br>
-                            <center>
-                                <input type="submit" value="Login" id="login-btn" class="btn btn-info">
-                            </center>
-                            <p class="signup-msg-link">
-                                <span id="signupmsg"> New to TeamRocket?</span>
-                                <a href="#" id="signuplink">Signup now</a>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-            </div> -->
+    
 </body>
 
 <?php

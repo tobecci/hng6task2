@@ -35,16 +35,16 @@
 							<form action="controllers/signup_handler.php" method="POST">
 
 								<label for="fname" id="fname-lb">Full Name</label><br>
-								<input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your full name">
+								<input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your full name" required>
 								<br>
 								<label for="email" id="email-lb">Email Address</label><br>
-								<input type="email" name="email" id="email" class="form-control" placeholder="Email@example.com">
+								<input type="email" name="email" id="email" class="form-control" placeholder="Email@example.com"  required>
 								<br>
 								<label for="password" id="psd-lb">Create Password</label><br>
-								<input type="password" name="password" id="password" class="form-control psd" placeholder="Enter your password">
+								<input type="password" name="password" id="password" class="form-control psd" placeholder="Enter your password"  required>
 								<br>
 								<label for="conf_password" id="conf-psd-lb">Confirm Password</label><br>
-								<input type="password" name="conf_password" id="conf_password" class="form-control" placeholder="Enter your password again">
+								<input type="password" name="conf_password" id="conf_password" class="form-control" placeholder="Enter your password again"  required>
 								<br>
 
 								<div class="t-c">

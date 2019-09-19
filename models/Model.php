@@ -3,17 +3,20 @@ class Model
 {
     public function __construct()
     {
-        $this->name = "model";
+        
     }
 
     /**
      * function for adding data to the username and password field
      */
-    public static function add_entry($email, $password)
+    public static function add_entry($name, $email, $password)
     {
-        $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT));
+        $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT), "name" => $name);
+        if(Model::user_exists($email)){
+            return false;
+        }
         //declaring the store.json     
-        $filetxt = 'store.json';
+        $filetxt = __DIR__."/store.json";
         //declaring an empty array
         $arr_data   = [];
         //fetching existing file from store.json
@@ -25,14 +28,16 @@ class Model
         //decoding/converting php array string  to json object 
         $json_data  = json_encode($arr_data);
         //storing the final data into store.json     
-        file_put_contents($filetxt, $json_data);
+        if(!file_put_contents($filetxt, $json_data)){
+            return false;
+        }
         return true;
     }
 
     public static function validate($email, $password)
     {
         $check = false;
-        $users = json_decode(file_get_contents('store.json'));
+        $users = json_decode(file_get_contents(__DIR__."/store.json"));
         foreach ($users as $user) {
             if ($user->username === $email) {
                 if (password_verify($password, $user->password)) {
@@ -46,7 +51,7 @@ class Model
     public static function user_exists($email)
     {
         $check = false;
-        $users = json_decode(file_get_contents('store.json'));
+        $users = json_decode(file_get_contents(__DIR__."/store.json"));
         foreach ($users as $user) {
             if ($user->username === $email) {
                 $check = true;
@@ -64,5 +69,3 @@ class Model
 
 
 // echo $model->validate("admin", "admin");
-
-var_dump(MODEL::user_exists("tobecci"));
