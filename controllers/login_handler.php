@@ -8,22 +8,7 @@ require_once($path);
 
 //check the HTTP Request method 
 
-<<<<<<< HEAD
-if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
-    $password = filter_input(INPUT_POST, 'password') ;
-    $email = filter_input(INPUT_POST, 'email') ;
-    
-    $isValid = Model::validate($email , $password) ; 
-     if($isValid){//redirect control to the success page
-         session_destroy();
-         $success_path = '../pages/success.php' ;
-          header("Location: ".$success_path) ;
-     }
-     else{// redirect control back to login( index.php)
-         $index_path = '../index.php'  ;
-         header("Location: ".$index_path) ;
-     }
-=======
+
     $isValid = Model::validate($email, $password);
     if ($isValid) { //redirect control to the success page
         session_destroy();
@@ -33,5 +18,3 @@ if(filter_input(INPUT_SERVER, 'REQUEST_METHOD')=='POST'){
         $index_path = '../index.php';
         header("Location: ".$index_path);
     }
->>>>>>> 1501bc89696155eeaa22b91f8bbd81e4036aafc5
-}
