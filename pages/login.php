@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +10,11 @@
     <link href="http://fonts.googleapis.com/css?family=roboto">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            updateInputs() ; 
+        };
+    </script>
 </head>
 
 <body>
@@ -35,7 +40,7 @@
                     <h2>Hello,</h2>
                     <h2>Welcome back </h2>
                 </div>
-                <form action="controllers/login_handler.php" method="post" class="form">
+                <form action="controllers/login_handler.php" method="post" class="form" onsubmit="return processForm()">
                     <label for="username">Email</label><br>
                     <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email"  required>
                     <br>
@@ -43,7 +48,7 @@
                     <input type="password" name="password" id="password" class="form-control" placeholder="Password"  required>
                     <br>
                     <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
-                    <br>
+                    <P id="error_message" style="color: red">&nbsp;</p>
                     <span class="check-item">
                         <input type="checkbox" name="remember" id="remember">
                         <label for="remember" id="rem-me">Remember me</label>
@@ -69,17 +74,17 @@
 //like an error messsage.Also, the invalid data entered will be retained
 if (isset($_SESSION['username'])) {
 
-    $script = "<script type=text/javascript>\n";
+    $script = "<script type='text/javascript'>\n";
     $script .= "window.onload=function(){";
 
     $script .= "document.getElementById('error_message').firstChild.nodeValue='Invalid entry';\n";
 
     $script .= "document.getElementById('username').value ='";
-    $script .= $_SESSION['username'];
+    $script .= $_SESSION['username'] ;
     $script .= "';\n";
 
-    $script .= "document.getElementById('password').value ='";
-    $script .= $_SESSION['password'];
+    $script .= "documet.getElementById('password').value ='";
+    $script .= $_SESSION['password'] ;
     $script .= "';\n";
 
     $script .= "}\n";
