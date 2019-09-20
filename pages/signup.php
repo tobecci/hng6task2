@@ -53,6 +53,7 @@
 								</div>
 
 
+
 								<center>
 									<input type="submit" value="Signup" id="signup-btn" class="btn btn-info">
 								</center>
@@ -64,6 +65,7 @@
 							</form>
 						</div>
 					</div>
+
 				</div>
 			</div>
 </body>

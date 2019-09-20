@@ -7,9 +7,7 @@ $path = '../models/Model.php';
 require_once($path);
 
 //check the HTTP Request method 
-if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') {
-    $password = filter_input(INPUT_POST, 'password');
-    $email = filter_input(INPUT_POST, 'username');
+
 
     $isValid = Model::validate($email, $password);
     if ($isValid) { //redirect control to the success page
@@ -20,4 +18,3 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') {
         $index_path = '../index.php';
         header("Location: ".$index_path);
     }
-}

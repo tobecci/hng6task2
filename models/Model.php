@@ -13,8 +13,9 @@ class Model
     {
         $array = array("username" => $email, "password" => password_hash($password, PASSWORD_DEFAULT), "name" => $name);
         if(Model::user_exists($email)){
-            return false;
-        }
+            return false; ?>
+            <script>alert();</script>
+        <?php }
         //declaring the store.json     
         $filetxt = __DIR__."/store.json";
         //declaring an empty array

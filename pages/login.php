@@ -42,13 +42,13 @@
                 </div>
                 <form action="controllers/login_handler.php" method="post" class="form" onsubmit="return processForm()">
                     <label for="username">Email</label><br>
-                    <input type="text" name="username" id="username" class="form-control" placeholder="Username/Email"  required>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Email"  required>
                     <br>
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password"  required>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password"  required>
                     <br>
                     <span id="fgt-psd"><a href="#">Forgot Password?</a></span>
-                    <P id="error_message" style="color: red">&nbsp;</p>
+                    <p id="error_message" style="color: red">&nbsp;</p>
                     <span class="check-item">
                         <input type="checkbox" name="remember" id="remember">
                         <label for="remember" id="rem-me">Remember me</label>
